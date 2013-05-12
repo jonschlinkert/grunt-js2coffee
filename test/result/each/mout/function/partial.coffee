@@ -5,7 +5,7 @@ slice = (arr, offset) ->
 Creates a partially applied function.
 ###
 partial = (fn, var_args) ->
-  argsArr = slice(arguments_, 1) #curried args
+  argsArr = slice(arguments, 1) #curried args
   ->
-    fn.apply this, argsArr.concat(slice(arguments_))
+    fn.apply this, argsArr.concat(slice(arguments))
 module.exports = partial

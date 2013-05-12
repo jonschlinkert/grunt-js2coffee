@@ -5,7 +5,7 @@ Array reduceRight
 reduceRight = (arr, fn, initVal) ->
   
   # check for args.length since initVal might be "undefined" see #gh-57
-  hasInit = arguments_.length > 2
+  hasInit = arguments.length > 2
   if not arr? or not arr.length
     if hasInit
       return initVal

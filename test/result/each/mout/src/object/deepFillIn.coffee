@@ -5,10 +5,10 @@ define ["./forOwn", "../lang/isPlainObject"], (forOwn, isPlainObject) ->
   ###
   deepFillIn = (target, defaults) ->
     i = 0
-    n = arguments_.length
+    n = arguments.length
     obj = undefined
     while ++i < n
-      obj = arguments_[i]
+      obj = arguments[i]
       if obj
         forOwn obj, (newValue, key) ->
           curValue = target[key]

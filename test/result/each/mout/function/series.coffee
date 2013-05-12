@@ -5,11 +5,11 @@ passing the same arguments to each one. (useful for batch processing
 items during a forEach loop)
 ###
 series = ->
-  fns = arguments_
+  fns = arguments
   ->
     i = 0
     n = fns.length
     while i < n
-      fns[i].apply this, arguments_
+      fns[i].apply this, arguments
       i += 1
 module.exports = series

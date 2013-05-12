@@ -7,7 +7,7 @@ debounce = (fn, threshold, isAsap) ->
     delayed = ->
       result = fn.apply(context, args)  unless isAsap
       timeout = null
-    args = arguments_
+    args = arguments
     context = this
     if timeout
       clearTimeout timeout

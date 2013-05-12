@@ -9,7 +9,7 @@ define ["../time/now"], (now) ->
       result = fn.apply(context, args)
     throttled = ->
       context = this
-      args = arguments_
+      args = arguments
       cur = now()
       diff = delay - (cur - prev)
       if diff <= 0

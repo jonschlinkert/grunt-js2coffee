@@ -10,7 +10,7 @@ define ->
   @return {Function} Wrapped Function.
   ###
   bind = (fn, context, args) ->
-    argsArr = slice(arguments_, 2) #curried args
+    argsArr = slice(arguments, 2) #curried args
     ->
-      fn.apply context, argsArr.concat(slice(arguments_))
+      fn.apply context, argsArr.concat(slice(arguments))
   bind

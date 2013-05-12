@@ -3,7 +3,7 @@
 Return first non void argument
 ###
 defaults = (var_args) ->
-  find toArray(arguments_), nonVoid
+  find toArray(arguments), nonVoid
 nonVoid = (val) ->
   val?
 toArray = require("./toArray")

@@ -5,10 +5,10 @@ objects.
 ###
 deepMixIn = (target, objects) ->
   i = 0
-  n = arguments_.length
+  n = arguments.length
   obj = undefined
   while ++i < n
-    obj = arguments_[i]
+    obj = arguments[i]
     forOwn obj, copyProp, target  if obj
   target
 copyProp = (val, key) ->

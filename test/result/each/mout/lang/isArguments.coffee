@@ -2,7 +2,7 @@ isKind = require("./isKind")
 
 ###
 ###
-isArgs = (if isKind(arguments_, "Arguments") then (val) ->
+isArgs = (if isKind(arguments, "Arguments") then (val) ->
   isKind val, "Arguments"
  else (val) ->
   

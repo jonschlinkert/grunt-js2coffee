@@ -5,6 +5,6 @@ define ["../array/join"], (join) ->
   empty string it will be ignored from resulting path.
   ###
   makePath = (var_args) ->
-    result = join(Array::slice.call(arguments_), "/")
+    result = join(Array::slice.call(arguments), "/")
     result.replace /\/{2,}/g, "/"
   makePath

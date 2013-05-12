@@ -4,7 +4,7 @@ Returns a function that composes multiple functions, passing results to
 each other.
 ###
 compose = ->
-  fns = arguments_
+  fns = arguments
   (arg) ->
     
     # only cares about the first argument since the chain can only

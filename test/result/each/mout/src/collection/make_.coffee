@@ -5,7 +5,7 @@ define ->
   ###
   makeCollectionMethod = (arrMethod, objMethod, defaultReturn) ->
     ->
-      args = Array::slice.call(arguments_)
+      args = Array::slice.call(arguments)
       return defaultReturn  unless args[0]?
       
       # array-like is treated as array

@@ -6,7 +6,7 @@ define ["./unique", "./append"], (unique, append) ->
   union = (arrs) ->
     results = []
     i = -1
-    len = arguments_.length
-    append results, arguments_[i]  while ++i < len
+    len = arguments.length
+    append results, arguments[i]  while ++i < len
     unique results
   union

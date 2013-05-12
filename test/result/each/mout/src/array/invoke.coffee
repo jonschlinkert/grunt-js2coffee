@@ -6,7 +6,7 @@ define ["./forEach"], (forEach) ->
   ###
   invoke = (arr, methodName, var_args) ->
     return arr  unless arr?
-    args = Array::slice.call(arguments_, 2)
+    args = Array::slice.call(arguments, 2)
     i = -1
     len = arr.length
     value = undefined

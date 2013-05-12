@@ -11,8 +11,8 @@ merge = ->
   
   # make sure we don't modify source element and it's properties
   # objects are passed by reference
-  target = deepClone(arguments_[0])
-  while obj = arguments_[i++]
+  target = deepClone(arguments[0])
+  while obj = arguments[i++]
     for key of obj
       continue  unless hasOwn(obj, key)
       val = obj[key]
