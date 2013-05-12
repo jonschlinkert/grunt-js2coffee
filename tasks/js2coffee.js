@@ -40,7 +40,7 @@ module.exports = function(grunt) {
         grunt.file.write(fp.dest, coffee);
 
         // Print a success message.
-        grunt.log.ok('File "' + fp.dest + '"' + ' >> '.green + 'to coffee');
+        grunt.log.ok('File "' + fp.dest + '"...' + 'ok.'.green);
       }
     });
   });
@@ -48,7 +48,7 @@ module.exports = function(grunt) {
   var convertToCoffee = function(source, options) {
     var js2coffee;
     try {
-      return js2coffee = require("js2coffee").build(source, options);
+      return js2coffee = require("./lib/js2coffee").build(source, options);
     } catch (e) {
       grunt.log.error(e);
       grunt.fail.warn('Coffee-scriptification failed.');
