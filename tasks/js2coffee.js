@@ -40,7 +40,7 @@ module.exports = function(grunt) {
         grunt.file.write(fp.dest, coffee);
 
         // Print a success message.
-        grunt.log.ok('File "' + fp.dest + '"...' + 'ok.'.green);
+        grunt.log.ok('File "' + fp.dest + '"...' + 'OK.'.green);
       }
     });
   });

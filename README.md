@@ -1,6 +1,6 @@
 # grunt-js2coffee
 
-> Convert JavaScript to coffee-script.
+> Convert JavaScript to CoffeeScript, with Grunt.js
 
 ## Getting Started
 _If you haven't used [grunt][] before, be sure to check out the [Getting Started][] guide._
@@ -30,68 +30,49 @@ In your project's Gruntfile, add a section named `js2coffee` to the data object 
 
 ```js
 grunt.initConfig({
+
   js2coffee: {
-    options: {
-      // Task-specific options go here.
-    },
     your_target: {
       // Target-specific file lists and/or options go here.
+    }
+    // Example: this target compiles a single file
+    // from JavaScript to CofeeScript
+    single: {
+      files: {
+        'test/result/single/ltrim.coffee': [
+          'test/fixtures/mout/string/ltrim.js'
+        ]
+      }
     },
-  },
-})
-```
+    // Example: this target compiles a directory of
+    // JavaScript files to individual CofeeScript
+    // files, retaining the same directory structure
+    // in the destination folder
+    each: {
+      options: {},
+      files: [
+        { 
+          expand: true, 
+          cwd: 'test/fixtures/mout', 
+          src: ['**/*.js'], 
+          dest: 'test/result/each/mout',
+          ext: '.coffee'
+        }
+      ]
+    }
+  }
 
-### Options
-
-#### options.separator
-Type: `String`
-Default value: `',  '`
-
-A string value that is used to do something with whatever.
-
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
-
-### Usage Examples
-
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
-```js
-grunt.initConfig({
-  js2coffee: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
-```
-
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
-
-```js
-grunt.initConfig({
-  js2coffee: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
+});
 ```
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt][].
 
-## Author
+## Credit
+
+Thank you to **[@rstacruz](https://github.com/rstacruz)** and the contributors of [js2coffee](https://github.com/rstacruz/js2coffee) for all of the hard work that made this plugin possible.
+
+## Plugin Author
 
 **Jon Schlinkert**
 
@@ -100,4 +81,4 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
-_(Nothing yet)_
+* 2013-05-12      v0.1.0      First commit.
