@@ -1,0 +1,47 @@
+{
+  "name": "grunt-js2coffee",
+  "description": "Convert JavaScript to coffee-script.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jonschlinkert/grunt-js2coffee/",
+  "author": {
+    "name": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert/grunt-js2coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jonschlinkert/grunt-js2coffee.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/grunt-js2coffee/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/jonschlinkert/grunt-js2coffee/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.6.2",
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "~0.4.0a",
+    "grunt-contrib-jshint": "~0.1.0",
+    "grunt-contrib-nodeunit": "~0.1.0",
+    "js2coffee": "~0.2.0"
+  },
+  "keywords": [
+    "gruntplugin",
+    "coffee-script",
+    "coffeescript",
+    "js to coffee",
+    "javascript to coffee-script",
+    "grunt coffee-script",
+    "js to coffee"
+  ]
+}
