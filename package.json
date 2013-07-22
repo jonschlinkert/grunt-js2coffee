@@ -1,7 +1,7 @@
 {
   "name": "grunt-js2coffee",
   "description": "Convert JavaScript to coffee-script.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/jonschlinkert/grunt-js2coffee/",
   "author": {
     "name": "Jon Schlinkert",
