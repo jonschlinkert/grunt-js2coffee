@@ -35,7 +35,7 @@ module.exports = function(grunt) {
       if (coffee.length < 1) {
         grunt.log.warn('Destination not written because dest file was empty.');
       } else {
-        
+
         // Write the destination file.
         grunt.file.write(fp.dest, coffee);
 

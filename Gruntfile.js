@@ -28,19 +28,19 @@ module.exports = function(grunt) {
     js2coffee: {
       single: {
         files: {
-          'test/result/single/ltrim.coffee': [
-            'test/fixtures/mout/string/ltrim.js'
+          'tmp/actual/single/contains.coffee': [
+            'test/fixtures/mout/string/contains.js'
           ]
         }
       },
       each: {
         options: {},
         files: [
-          { 
-            expand: true, 
-            cwd: 'test/fixtures/mout', 
-            src: ['**/*.js'], 
-            dest: 'test/result/each/mout',
+          {
+            expand: true,
+            cwd: 'test/fixtures/mout',
+            src: ['**/*.js'],
+            dest: 'tmp/actual/',
             ext: '.coffee'
           }
         ]
@@ -52,10 +52,10 @@ module.exports = function(grunt) {
       tests: ['test/*_test.js']
     },
 
-    // Before generating any new files, 
+    // Before generating any new files,
     // remove any previously-created files.
     clean: {
-      tests: ['test/result/mout/**']
+      tests: ['tmp/actual/mout/**']
     }
   });
 
