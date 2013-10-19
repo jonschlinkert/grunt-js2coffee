@@ -31,7 +31,7 @@ module.exports = function(grunt) {
       }).map(grunt.file.read).join(grunt.util.normalizelf(grunt.util.linefeed)); // Read source files.
 
       // Handle options.
-      var coffee = convertToCoffee(srcFile);
+      var coffee = convertToCoffee(srcFile, options);
       if (coffee.length < 1) {
         grunt.log.warn('Destination not written because dest file was empty.');
       } else {
