@@ -31,7 +31,7 @@ module.exports = function(grunt) {
       }).map(grunt.file.read).join(grunt.util.normalizelf(grunt.util.linefeed)); // Read source files.
 
       // Handle options.
-      var coffee = convertToCoffee(srcFile);
+      var coffee = convertToCoffee(srcFile, options);
       if (coffee.length < 1) {
         grunt.log.warn('Destination not written because dest file was empty.');
       } else {
@@ -48,7 +48,7 @@ module.exports = function(grunt) {
   var convertToCoffee = function(source, options) {
     var js2coffee;
     try {
-      return js2coffee = require("./lib/js2coffee").build(source, options);
+      return js2coffee = require("js2coffee").build(source, options);
     } catch (e) {
       grunt.log.error(e);
       grunt.fail.warn('Coffee-scriptification failed.');

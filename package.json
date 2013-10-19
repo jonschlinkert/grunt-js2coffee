@@ -27,6 +27,9 @@
   "scripts": {
     "test": "grunt test"
   },
+  "dependencies": {
+     "js2coffee": "~0.2.2"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "coffee-script": "~1.6.3",
