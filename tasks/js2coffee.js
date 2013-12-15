@@ -1,8 +1,8 @@
 /*
  * js2coffee
- * https://github.com/assemble/assemble-examples/
+ * https://github.com/jonschlinkert/grunt-js2coffee
  *
- * Copyright (c) 2013 assemble
+ * Copyright (c) 2013 Jon Schlinkert
  * Licensed under the MIT license.
  */
 
@@ -12,10 +12,15 @@ module.exports = function(grunt) {
 
   var path = require('path');
 
-  grunt.registerMultiTask('js2coffee', 'Your task description goes here.', function() {
+  grunt.registerMultiTask('js2coffee', 'Convert JavaScript files to CoffeeScript.', function() {
 
     // Merge task-specific and/or target-specific options with these defaults.
-    var options = this.options({});
+    var options = this.options({
+      single_quotes: true,
+      indent: '  ',
+      no_comments: false,
+      show_src_lineno: false
+    });
 
     // Iterate over all specified file groups.
     this.files.forEach(function(fp) {

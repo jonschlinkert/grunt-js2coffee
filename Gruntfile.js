@@ -14,11 +14,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     jshint: {
-      all: [
-        'Gruntfile.js',
-        'tasks/*.js',
-        '<%= nodeunit.tests %>'
-      ],
+      all: ['Gruntfile.js', 'tasks/*.js'],
       options: {
         jshintrc: '.jshintrc'
       }
@@ -27,35 +23,25 @@ module.exports = function(grunt) {
     // Configuration to be run (and then tested).
     js2coffee: {
       single: {
-        files: {
-          'tmp/actual/single/contains.coffee': [
-            'test/fixtures/mout/string/contains.js'
-          ]
-        }
+        options: {
+          single_quotes: false,
+          indent: '    ',
+          show_src_lineno: true
+        },
+        src: 'tmp/mout/src/string/contains.js',
+        dest: 'tmp/single/contains.coffee'
       },
       each: {
-        options: {},
         files: [
-          {
-            expand: true,
-            cwd: 'test/fixtures/mout',
-            src: ['**/*.js'],
-            dest: 'tmp/actual/',
-            ext: '.coffee'
-          }
+          {expand: true, cwd: 'tmp/mout/src', src: ['**/*.js'], dest: 'tmp/coffee/mout/', ext: '.coffee'}
         ]
       }
-    },
-
-    // Unit tests.
-    nodeunit: {
-      tests: ['test/*_test.js']
     },
 
     // Before generating any new files,
     // remove any previously-created files.
     clean: {
-      tests: ['tmp/actual/mout/**']
+      tests: ['tmp/coffee/**', 'tmp/single/**']
     }
   });
 
@@ -65,7 +51,6 @@ module.exports = function(grunt) {
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-nodeunit');
 
   // plugin's task(s), then test the result.
   grunt.registerTask('test', ['clean', 'js2coffee']);
