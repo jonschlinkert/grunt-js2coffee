@@ -14,7 +14,7 @@ npm install grunt-js2coffee --save-dev
 Once that's done, add this line to your project's Gruntfile:
 
 ```js
-grunt.loadNpmTasks('js2coffee');
+grunt.loadNpmTasks('grunt-js2coffee');
 ```
 
 If the plugin has been installed correctly, running `grunt --help` at the command line should list the newly-installed plugin's task or tasks. In addition, the plugin should be listed in package.json as a `devDependency`, which ensures that it will be installed whenever the `npm install` command is run.
