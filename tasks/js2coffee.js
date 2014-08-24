@@ -1,6 +1,5 @@
 /*
- * js2coffee
- * https://github.com/jonschlinkert/grunt-js2coffee
+ * js2coffee <https://github.com/jonschlinkert/grunt-js2coffee>
  *
  * Copyright (c) 2013 Jon Schlinkert
  * Licensed under the MIT license.

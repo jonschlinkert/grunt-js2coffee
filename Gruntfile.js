@@ -31,9 +31,15 @@ module.exports = function(grunt) {
         src: 'tmp/mout/src/string/contains.js',
         dest: 'tmp/single/contains.coffee'
       },
-      each: {
+      multiple: {
         files: [
-          {expand: true, cwd: 'tmp/mout/src', src: ['**/*.js'], dest: 'tmp/coffee/mout/', ext: '.coffee'}
+          {
+            expand: true,
+            cwd: 'tmp/mout/src',
+            src: ['**/*.js'],
+            dest: 'tmp/coffee/mout/',
+            ext: '.coffee'
+          }
         ]
       }
     },
