@@ -7,7 +7,7 @@
 
 'use strict';
 
-module.exports = function(grunt) {
+module.exports = grunt => {
 
   var path = require('path');
 
@@ -22,9 +22,9 @@ module.exports = function(grunt) {
     });
 
     // Iterate over all specified file groups.
-    this.files.forEach(function(fp) {
+    this.files.forEach(fp => {
 
-      var srcFile = fp.src.filter(function(filepath) {
+      var srcFile = fp.src.filter(filepath => {
         // Verify that files exist. Warn if a source file/pattern was invalid.
         if (!grunt.file.exists(filepath)) {
           grunt.log.warn('Source file "' + filepath + '" not found.');
@@ -49,7 +49,7 @@ module.exports = function(grunt) {
     });
   });
 
-  var convertToCoffee = function(source, options) {
+  var convertToCoffee = (source, options) => {
     var js2coffee;
     try {
       return js2coffee = require("js2coffee").build(source, options);
